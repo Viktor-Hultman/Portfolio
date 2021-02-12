@@ -2,9 +2,16 @@ import { Link } from 'react-router-dom';
 
 import styled from 'styled-components';
 
-const StyledNav = styled.nav`
+export const StyledNav = styled.nav`
 width: 70%;
 border-bottom: 2px solid #B06500;
+display: flex;
+align-items: center;
+justify-content: space-between;
+
+& h1 {
+    font-family: 'Merienda', cursive;
+}
 `
 
 export const StyledUL = styled.ul`
@@ -15,7 +22,6 @@ justify-content: flex-end;
 align-items: center;
 list-style: none;
 height: 50px;
-width: 100%;
 
 
 @media (max-width: 305px) {
@@ -24,13 +30,16 @@ width: 100%;
 `;
 
 export const BlueLink = styled(Link)`
+font-family: 'Nunito', sans-serif;
 font-size: 20px;
 color: #B06500;
 text-decoration: none;
 padding-right: 20px;
+transition: color 0.4s;
 
 &:hover {
     color: #bababa;
+    
 }
 
 @media (max-width: 170px) {
@@ -41,12 +50,10 @@ padding-right: 20px;
 function Navbar() {
     return (
         <StyledNav>
+            <h1>VH</h1>
             <StyledUL>
                 <li>
-                    <BlueLink to="/">Home</BlueLink>
-                </li>
-                <li>
-                    <BlueLink to="/about">About</BlueLink>
+                    <BlueLink to="/">About</BlueLink>
                 </li>
                 <li>
                     <BlueLink to="/projects">Projects</BlueLink>

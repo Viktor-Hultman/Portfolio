@@ -1,61 +1,53 @@
-import { Background } from './Home';
+import {
+    Background, CenterContentContainer, ContactContainerBox, Title,
+    ContactInfoDiv, SmallLogo, StyledLink, MessageButtonDiv
+} from './StyledElements';
+
+import React from 'react';
 import Navbar from './Navbar';
-import LinkedinLogo from './linkedin-logo.png'
-import GithubLogo from './github-logo.png';
-import EmailLogo from './EmailLogo.png'
+import LinkedinLogo from './imgs/linkedin-logo.png'
+import GithubLogo from './imgs/github-logo.png';
+import EmailLogo from './imgs/EmailLogo.png'
 
 
-import styled from 'styled-components';
 
-export const CenterContentContainer = styled.div`
-display: flex;
-flex-direction: column;
-justify-content: center;
-align-items: center;
-height: 100%;
-width: 100%;
-padding-top: 100px;
-`
 
-const ContactContainerBox = styled.div`
-color: #0D0D0D;
-display: flex;
-flex-direction: column;
-align-items: center;
-height: 50%;
-width: 60%;
 
-@media (max-width: 700px) {
-    height: 70%;
-    width: 100%;
+
+class MessageButton extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            message: 'Did you like my portfolio?',
+            display: '',
+            color: 'blue'
+        };
+        this.toggleMessage = this.toggleMessage.bind(this);
+        this.vanish = this.vanish.bind(this);
+    }
+
+    toggleMessage() {
+        this.setState({ message: "Horray!" })
+    }
+
+    vanish() {
+        this.setState({ display: "none" })
+    }
+    render() {
+
+        return (
+            <MessageButtonDiv>
+                <h2>
+                    {this.state.message}
+                </h2>
+                <button style={{ display: this.state.display }} onClick={() => { this.toggleMessage(); this.vanish() }}>
+                    Yes!
+                </button>
+            </MessageButtonDiv>
+        )
+    }
 }
-`
 
-export const Title = styled.h1`
-padding: 20px;
-color: #e3e3e3;
-`
-
-const ContactInfoDiv = styled.div`
-padding-top: 30px;
-width: 70%;
-height: 50px;
-display: flex;
-align-items: center;
-justify-content: center;
-`
-
-const SmallLogo = styled.img`
-padding-right: 20px;
-`
-export const StyledLink = styled.a`
-text-decoration: none;
-color: #B06500;
-
-&:hover {
-    color: #bababa;
-}
-`
 
 
 function Contact() {
@@ -80,12 +72,13 @@ function Contact() {
                         <SmallLogo src={LinkedinLogo} />
                         <h2><StyledLink href="https://www.linkedin.com/in/viktor-hultman-a65a1b18a/" target="_blank">My linkedin</StyledLink></h2>
                     </ContactInfoDiv>
+                    
 
                 </ContactContainerBox>
 
+                <MessageButton />
+
             </CenterContentContainer>
-
-
 
         </Background>
 

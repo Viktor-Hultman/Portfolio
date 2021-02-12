@@ -2,12 +2,12 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { createGlobalStyle } from 'styled-components';
 import App from './App';
-// import './index.css';
 
 const GlobalStyle = createGlobalStyle`
 * {
   margin: 0;
   padding: 0;
+  
 }
 
 ::-webkit-scrollbar {
