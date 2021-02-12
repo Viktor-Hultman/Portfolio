@@ -1,5 +1,7 @@
 import styled from 'styled-components';
 
+import { Link } from 'react-router-dom';
+
 
 export const Background = styled.div`
 display: flex;
@@ -23,7 +25,7 @@ color: #e3e3e3;
 }
 `
 export const ContentDiv = styled.div`
-width: 80%;
+width: 70%;
 display: flex;
 flex-direction: column;
 `
@@ -81,6 +83,7 @@ width: 100%;
 justify-content: center;
 align-items: center;
 text-align: center;
+margin-top: 30px;
 
 & h2 {
     font-family: 'Nunito', sans-serif;
@@ -231,4 +234,51 @@ padding: 10px;
         color: white;
         cursor: pointer;
     }
+`
+
+export const StyledNav = styled.nav`
+width: 70%;
+border-bottom: 2px solid #B06500;
+display: flex;
+align-items: center;
+justify-content: space-between;
+
+& h1 {
+    font-family: 'Merienda', cursive;
+    align-self: flex-end;
+}
+`
+
+export const StyledUL = styled.ul`
+display: flex;
+flex-wrap: wrap;
+flex-direction: row;
+justify-content: flex-end;
+align-items: center;
+list-style: none;
+height: 50px;
+
+
+@media (max-width: 400px) {
+    flex-direction: column;
+    height: 90px;
+}
+`;
+
+export const NavbarLink = styled(Link)`
+font-family: 'Nunito', sans-serif;
+font-size: 20px;
+color: #B06500;
+text-decoration: none;
+padding: 0px 5px 0px 5px;
+transition: color 0.4s;
+
+&:hover {
+    color: #bababa;
+    
+}
+
+@media (max-width: 170px) {
+    padding-right: 10px;
+}
 `

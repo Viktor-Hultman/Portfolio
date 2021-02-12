@@ -1,7 +1,7 @@
 import { Background, ContentDiv, Row1Div, SmallContainer, 
     StyledImg, StyledLink, RowLong, LongContainer } from './StyledElements';
 
-import ViktorPic from './imgs/Viktor-profil-bild.jpeg';
+import ViktorPic from './imgs/ViktorProfilBild.jpg';
 import Navbar from './Navbar';
 import Weather from './Weather';
 
@@ -19,11 +19,12 @@ function Home() {
             <ContentDiv>
                 <Row1Div>
                     <SmallContainer>
-                        <StyledImg src={ViktorPic} />
+                        <StyledImg src={ViktorPic} alt="Picture of Viktor Hultman" />
                         <h1>Viktor Hultman</h1>
                     </SmallContainer>
                     <SmallContainer>
                         <h1>Front End Developer</h1>
+                        <h3>I'm a problem solver who lives in Södertälje</h3>
                         <h3>Stuff I work with:</h3>
                         <ul>
                             <li>Html, CSS and vanilla JavaScript</li>

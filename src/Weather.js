@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
 
-
+//This whole file is dedicated for the OpenWeathermap api only.
 
 const url = "http://api.openweathermap.org/data/2.5/weather?q=södertälje&APPID=f8384513fad5f91ea04d07a2cbf916ec&units=metric";
 
@@ -21,8 +21,8 @@ width: 50px;
 const WeatherContainer = styled.div`
 display: flex;
 flex-direction: column;
-width: 260px;
-height: 105px;
+width: 250px;
+height: 120px;
 padding: 10px;
 margin: 10px;
 background: #6d7478;
@@ -35,7 +35,7 @@ border-radius: 10px;
     font-size: 28px;
     font-family: 'Open-sans', sans-serif;
     letter-spacing: 1px;
-    padding: 0px;
+    padding-bottom: 0px;
 }
 
 & h3 {
@@ -79,8 +79,8 @@ class Weather extends Component {
 
                 <h2> {WeatherCity}, {WeatherCountry} </h2>
                 <h2><StyledIcon src={WeatherIcon} /> {Temp}°C</h2>
-                <h3>{WDCapitalized}. Feels like {FeelTemp}°C</h3>
-
+                <h3>{WDCapitalized}.</h3>
+                <h3>Feels like {FeelTemp}°C</h3>
             </WeatherContainer>
         )
     }
