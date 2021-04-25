@@ -5,7 +5,7 @@ CenterContentContainer, Title, ProjectContainerBox, SubTitle } from './StyledEle
 import Navbar from './Navbar';
 import QuirePic from './imgs/QuirePic.png';
 import RushPic from './imgs/RushPic.png';
-import CalculatorPic from './imgs/CalculatorPic.png';
+import Bev from './imgs/Bev.png';
 import GamePic from './imgs/ChooseAdventureGame.png';
 
 
@@ -41,10 +41,10 @@ function Projects() {
                     </GalleryDiv>
                     <GalleryDiv>
 
-                        <a href="https://viktor-hultman.github.io/homeMadeCalculator/" target="_blank" rel="noreferrer">
-                            <GalleryImg src={CalculatorPic} alt="Image of First homemade calculator project" />
+                        <a href="http://bevnews.surge.sh/" target="_blank" rel="noreferrer">
+                            <GalleryImg src={Bev} alt="Image of Bev News website" />
                         </a>
-                        <GalleryCaption>Calculator - My first attempt at making a calculator</GalleryCaption>
+                        <GalleryCaption>Bev - Dashboard Api website with Firebase back end</GalleryCaption>
                     </GalleryDiv>
                 </ProjectContainerBox>
             </CenterContentContainer>
