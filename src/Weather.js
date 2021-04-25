@@ -3,7 +3,7 @@ import styled from 'styled-components';
 
 //This whole file is dedicated for the OpenWeathermap api only.
 
-const url = "http://api.openweathermap.org/data/2.5/weather?q=södertälje&APPID=f04ab5ae018d0a655fea9c480b5b6668&units=metric";
+const url = "https://api.openweathermap.org/data/2.5/weather?q=södertälje&APPID=f04ab5ae018d0a655fea9c480b5b6668&units=metric";
 
 const PartOneIconUrl = "http://openweathermap.org/img/wn/";
 const PartTwoIconUrl = "@2x.png"
