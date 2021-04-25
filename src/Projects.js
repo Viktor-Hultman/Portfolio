@@ -41,7 +41,7 @@ function Projects() {
                     </GalleryDiv>
                     <GalleryDiv>
 
-                        <a href="http://bevnews.surge.sh/" target="_blank" rel="noreferrer">
+                        <a href="http://bevnews.surge.sh/landing" target="_blank" rel="noreferrer">
                             <GalleryImg src={Bev} alt="Image of Bev News website" />
                         </a>
                         <GalleryCaption>Bev - Dashboard Api website with Firebase back end</GalleryCaption>
