@@ -25,7 +25,7 @@ width: 250px;
 height: 120px;
 padding: 10px;
 margin: 10px;
-background: #6d7478;
+background: ${props => props.theme.weatherBoxBackground};
 border-radius: 10px;
 
 & h2 {

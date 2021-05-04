@@ -1,4 +1,4 @@
-import { Background, ContentDiv, Row1Div, SmallContainer, 
+import { Background, ContentDiv, InfoDiv, SmallContainer, 
     StyledImg, StyledLink, RowLong, LongContainer } from './StyledElements';
 
 import ViktorPic from './imgs/ViktorProfilBild.jpg';
@@ -7,17 +7,12 @@ import Weather from './Weather';
 
 
 
-
-
-
-
-
 function Home() {
     return (
         <Background>
             <Navbar />
             <ContentDiv>
-                <Row1Div>
+                <InfoDiv>
                     <SmallContainer>
                         <StyledImg src={ViktorPic} alt="Picture of Viktor Hultman" />
                         <h1>Viktor Hultman</h1>
@@ -27,12 +22,12 @@ function Home() {
                         <h3>I'm a problem solver who lives in Södertälje</h3>
                         <h3>Stuff I work with:</h3>
                         <ul>
-                            <li>Html, CSS and vanilla JavaScript</li>
-                            <li><StyledLink href="https://www.figma.com/" target="_blank" rel="noreferrer">Figma</StyledLink></li>
+                            <li>Html, CSS, vanilla JavaScript</li>
+                            <li><StyledLink href="https://www.figma.com/" target="_blank" rel="noreferrer">Figma, </StyledLink></li>
                             <li><StyledLink href="https://reactjs.org/" target="_blank" rel="noreferrer">React.js</StyledLink></li>
                         </ul>
                     </SmallContainer>
-                </Row1Div>
+                </InfoDiv>
                 <RowLong>
                     <LongContainer>
                         <h2>I also work with external api's such as the one used below called <StyledLink href="https://openweathermap.org/" target="_blank" rel="noreferrer">Openweathermap.org.</StyledLink></h2>

@@ -6,12 +6,12 @@ import { Link } from 'react-router-dom';
 export const Background = styled.div`
 display: flex;
 min-width: 100vw;
-background: #41494d;
+background: ${props => props.theme.backgroundColor};
 min-height: 100vh;
 flex-direction: column;
 text-align: center;
 align-items: center;
-color: #e3e3e3;
+color: ${props => props.theme.txtColor};
 & li {
     list-style: none;
 }
@@ -30,7 +30,7 @@ display: flex;
 flex-direction: column;
 `
 
-export const Row1Div = styled.div`
+export const InfoDiv = styled.div`
 display: flex;
 flex-direction: row;
 width: 100%;
@@ -56,7 +56,7 @@ text-align: center;
 min-height: 400px;
 width: 50%;
 min-width: 220px;
-color: #e3e3e3;
+color: ${props => props.theme.txtColor};
 
 & h1, h3 {
     font-family: 'Open Sans', sans-serif;
@@ -128,14 +128,14 @@ transition: transform .5s ease-in-out;
 `
 export const GalleryCaption = styled.h5`
 position: absolute;
-max-width: 150px;
+max-width: 180px;
 padding: 7px;
 margin-top: 15px;
 border-radius: 15px;
 word-break: break-word;
 font-size: 18px;
-background-color: rgba(0,0,0,.6);
-color: #f2f2f2;
+background-color: ${props => props.theme.galleryCaptionBackground};
+color: ${props => props.theme.txtColor};
 font-family: 'Open Sans', sans-serif;
 `
 
@@ -163,7 +163,6 @@ padding-top: 70px;
 `
 
 export const ContactContainerBox = styled.div`
-color: #0D0D0D;
 display: flex;
 flex-direction: column;
 align-items: center;
@@ -178,7 +177,7 @@ width: 60%;
 
 export const Title = styled.h1`
 padding: 20px;
-color: #e3e3e3;
+color: ${props => props.theme.txtColor};
 font-family: 'Open Sans', sans-serif;
 `
 
@@ -196,49 +195,28 @@ padding-right: 20px;
 `
 export const StyledLink = styled.a`
 text-decoration: none;
-color: #B06500;
+color: ${props => props.theme.linkColor};
 font-family: 'Nunito', sans-serif;
 transition: color 0.4s;
 
 &:hover {
-    color: #bababa;
+    color: ${props => props.theme.linkHoverColor};
 }
 `
 
-export const MessageButtonDiv = styled.div`
+export const ThemeButtonsDiv = styled.div`
 margin: 30px;
 padding: 10px;
-
 
 & h2 {
     font-family: 'Nunito', sans-serif;
     letter-spacing: 1px;
 }
-
-& button {
-    font-family: 'Nunito', sans-serif;
-    font-weight: 900;
-    margin-top: 10px;
-    width: 50px;
-    font-size: 18px;
-    padding: 5px;
-    border: 1px solid #B06500;
-    border-radius: 30px 30px 30px 30px;
-    background: #B06500;
-    color: #bababa;
-    transition: color 0.4s;
-    transition: background 0.4s;
-
-    } button:hover {
-        background: #B0650080;
-        color: white;
-        cursor: pointer;
-    }
 `
 
 export const StyledNav = styled.nav`
 width: 70%;
-border-bottom: 2px solid #B06500;
+border-bottom: 2px solid ${props => props.theme.navbarLine};
 display: flex;
 align-items: center;
 justify-content: space-between;
@@ -268,13 +246,13 @@ height: 50px;
 export const NavbarLink = styled(Link)`
 font-family: 'Nunito', sans-serif;
 font-size: 20px;
-color: #B06500;
+color: ${props => props.theme.linkColor};
 text-decoration: none;
 padding: 0px 5px 0px 5px;
 transition: color 0.4s;
 
 &:hover {
-    color: #bababa;
+    color: ${props => props.theme.linkHoverColor};
     
 }
 

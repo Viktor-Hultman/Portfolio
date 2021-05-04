@@ -49,7 +49,6 @@ function Projects() {
                 </ProjectContainerBox>
             </CenterContentContainer>
 
-
         </Background>
 
     );
